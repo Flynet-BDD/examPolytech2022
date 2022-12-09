@@ -1,0 +1,14 @@
+Q16)
+Docker est une structure de développement d'application qui à l'inverse des VM économise la partie OS en le partageant. 
+Elles sont plus légères, généralement plus performantes et rapides que les VM. 
+Docker sert à créer des conteneurs qui sont des parties de l'application que l'on va isoler.
+On va avoir autant de conteneur que d'instances (java, pgadmin, angular par exemples)  
+
+Q17)
+
+CI signifie Intégration continue. C'est automatiser un processus pour que les développeurs puissent collaborer ensemble.
+CD signifie Déploiement continue. C'est automatiser vers les différents environnements. Un exemple de logiciel utilisé est Github Actions que nous avons utilisé en cours.
+J'utilise Jenkins dans l'entreprise ou je travaille.
+
+Q18)
+Le cours est bon, il y a un mélange homogène entre pratique et cours.
