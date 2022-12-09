@@ -11,7 +11,9 @@ services :
     volumes:
     - mysql:/var/lib/mysql/
     networks:
-    - backend
+      backend:
+        aliases:
+        - mysql
     environment:
     - MYSQL_DATABASE=superheroes
     - MYSQL_USER=sa
@@ -30,7 +32,9 @@ services :
     build: ./java
     container_name: backend
     networks:
-    - backend
+      backend:
+        aliases:
+        - backend
     environment:
     - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/superheroes
     - SPRING_DATASOURCE_USERNAME=sa
@@ -38,7 +42,8 @@ services :
     ports:
     - 8448:8448
     depends_on:
-    - mysql
+      mysql:
+        condition: service_healthy
 
   frontend:
     image: front:1.0
